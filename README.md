@@ -223,7 +223,7 @@ Orellana
 
 Guarde los apellidos de los compañeros un archivo llamado apellidos.txt en la carpeta
 Comandos Utilizados
-cut -f 2 -d " " PrimerCiclo/Sistemas\ Operativos/U1/estudiantes.txt > PrimerCiclo/Lenguaje\ y\ Comunicacion/U1/ape
+cut -f 2 -d " " PrimerCiclo/Sistemas\ Operativos/U1/estudiantes.txt > PrimerCiclo/Lenguaje\ y\ Comunicacion/U1/apellidos.txt
 tree PrimerCiclo
 
 Resultado a Obtener: 
@@ -321,11 +321,19 @@ tree
 
 
 
-
-
-
 wget http://www.seracademia.com/academia/MilyUnaNoche.txt
+echo "Mil y una Noche: $(wc -w < MilyUnaNoche.txt) palabras"
 
+Salida a Obtener
+Mil y una Noche: 67887 palabras
+Observación el resultado muestra 67887 palabras porque el archivo se obtiene en tiempo real desde un enlace externo; por lo tanto, el conteo refleja la versión más reciente del documento disponible en el servidor.
+
+
+wget http://www.seracademia.com/academia/caperucitaraoja.txt
+echo "Caperucita Roja: $(wc -w < caperucitaraoja.txt) palabras"
+
+Salida a Obtener
+Caperucita Roja: 571 palabras
 
 
 
