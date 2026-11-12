@@ -107,3 +107,162 @@ PrimerCiclo/Sistemas Operativos/U2/
 
 ls
 Copia.PrimerCiclo_11112026_214510.tar.gz  Parcial01_11112026_214700.tar.gz  PrimerCiclo
+
+
+Se requiere listar todas las carpetas que contengan prácticas, por ejemplo, deberían aparecer, todas las carpetas que contengan el texto “práctica”
+
+Comando Utilizado:   find PrimerCiclo -type d -name "Pra*"
+
+Salida Esperada
+PrimerCiclo/Redes de Datos/U1/Practicas
+PrimerCiclo/Redes de Datos/U2/Practicas
+
+
+
+Comando Utilizado:    find PrimerCiclo -type d -name "Pra*"
+
+Salida Esperada
+PrimerCiclo/Redes de Datos/U1/Practicas
+PrimerCiclo/Redes de Datos/U2/Practicas
+
+
+Comando Utilizado:     find PrimerCiclo -type f -name "Me*"
+Salida Esperada
+
+PrimerCiclo/Redes de Datos/U1/Actividades/MediaA1
+PrimerCiclo/Redes de Datos/U2/Practicas/MediaA1
+PrimerCiclo/Redes de Datos/U2/Evaluaciones/MediaA1
+
+
+Comando Utilizado:     find . -type d -name "*[1-2]"
+Salida Esperada
+
+./PrimerCiclo/Sistemas Operativos/U1
+./PrimerCiclo/Sistemas Operativos/U2
+./PrimerCiclo/Redes de Datos/U1
+./PrimerCiclo/Redes de Datos/U2
+./PrimerCiclo/Lenguaje y Comunicacion/U1
+./PrimerCiclo/Lenguaje y Comunicacion/U2
+
+
+Comando Utilizado:     find . -type d -name "*[U][2]"
+Salida Esperada
+
+./PrimerCiclo/Sistemas Operativos/U2
+./PrimerCiclo/Redes de Datos/U2
+./PrimerCiclo/Lenguaje y Comunicacion/U2
+
+
+Comando Utilizado:    find PrimerCiclo -type f -name "B*"
+Salida Esperada
+
+PrimerCiclo/Redes de Datos/U1/Actividades/BajaA1
+PrimerCiclo/Redes de Datos/U2/Practicas/BajaA1
+PrimerCiclo/Redes de Datos/U2/Evaluaciones/BajaA1
+
+
+Para agregar nombres de los compañeros:
+
+nano PrimerCiclo/Sistemas\ Operativos/U1/estudiantes.txt
+tree PrimerCiclo
+PrimerCiclo
+├── Lenguaje y Comunicacion
+│   ├── U1
+│   └── U2
+├── Redes de Datos
+│   ├── U1
+│   │   ├── Actividades
+│   │   │   ├── AltaA1
+│   │   │   ├── BajaA1
+│   │   │   └── MediaA1
+│   │   ├── Evaluaciones
+│   │   └── Practicas
+│   └── U2
+│       ├── Actividades
+│       ├── Evaluaciones
+│       │   ├── AltaA1
+│       │   ├── BajaA1
+│       │   └── MediaA1
+│       └── Practicas
+│           ├── AltaA1
+│           ├── BajaA1
+│           └── MediaA1
+└── Sistemas Operativos
+    ├── U1
+    │   └── estudiantes.txt
+    └── U2
+
+
+cat PrimerCiclo/Sistemas\ Operativos/U1/estudiantes.txt
+Karen Peñafiel
+Justin Neira
+Carlos Jerves
+Jose Ochoa
+Jorge Orellana
+
+tail -n 3 PrimerCiclo/Sistemas\ Operativos/U1/estudiantes.txt
+Carlos Jerves
+Jose Ochoa
+Jorge Orellana
+
+head -n 4 PrimerCiclo/Sistemas\ Operativos/U1/estudiantes.txt
+Karen Peñafiel
+Justin Neira
+Carlos Jerves
+Jose Ochoa
+
+
+Para buscar los apellidos: 
+cut -f 2 -d " " PrimerCiclo/Sistemas\ Operativos/U1/estudiantes.txt
+Peñafiel
+Neira
+Jerves
+Ochoa
+Orellana
+
+
+Guarde los apellidos de los compañeros un archivo llamado apellidos.txt en la carpeta
+Comandos Utilizados
+cut -f 2 -d " " PrimerCiclo/Sistemas\ Operativos/U1/estudiantes.txt > PrimerCiclo/Lenguaje\ y\ Comunicacion/U1/ape
+tree PrimerCiclo
+
+Resultado a Obtener: 
+PrimerCiclo
+├── Lenguaje y Comunicacion
+│   ├── U1
+│   │   └── apellidos.txt
+│   └── U2
+├── Redes de Datos
+│   ├── U1
+│   │   ├── Actividades
+│   │   │   ├── AltaA1
+│   │   │   ├── BajaA1
+│   │   │   └── MediaA1
+│   │   ├── Evaluaciones
+│   │   └── Practicas
+│   └── U2
+│       ├── Actividades
+│       ├── Evaluaciones
+│       │   ├── AltaA1
+│       │   ├── BajaA1
+│       │   └── MediaA1
+│       └── Practicas
+│           ├── AltaA1
+│           ├── BajaA1
+│           └── MediaA1
+└── Sistemas Operativos
+    ├── U1
+    │   └── estudiantes.txt
+    └── U2
+
+16 directories, 11 files
+
+cat PrimerCiclo/Lenguaje\ y\ Comunicacion/U1/apellidos.txt
+Peñafiel
+Neira
+Jerves
+Ochoa
+Orellana
+
+
+
