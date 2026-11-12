@@ -265,4 +265,61 @@ Ochoa
 Orellana
 
 
+tar -cvf Copia.PrimerCiclo_$(date '+%d%m%Y_%H%M%S').tar.gz PrimerCiclo
+
+tar -czvf Copia.PrimerCiclo_$(date '+%d%m%Y_%H%M%S').tar.gz PrimerCiclo
+
+
+ls
+Copia.PrimerCiclo_09112026_201413.tar.gz  Copia.PrimerCiclo_11112026_233913.tar.gz  PrimerCiclo
+Copia.PrimerCiclo_11112026_233736.tar.gz  Parcial01_09112026_201433.tar.gz
+ 
+Aqui un error mio fue descomprimir el archivo con el mismo nombre que habia descomprimido al inicio, pero me guie en la fecha y hora mas reciente
+
+
+Mover el archivo a la carpeta descargas y descomprimir el archivo; evidenciar el árbol desde Descargas luego de descomprimir.
+
+Resultado a Obtener
+
+mv Copia.PrimerCiclo_11112026_233913.tar.gz ~/Descargas/
+cd ~/Descargas && tar -xzvf Copia.PrimerCiclo_11112026_233913.tar.gz
+
+
+tree
+.
+├── Copia.PrimerCiclo_11112026_233913.tar.gz
+└── PrimerCiclo
+    ├── Lenguaje y Comunicacion
+    │   ├── U1
+    │   │   └── apellidos.txt
+    │   └── U2
+    ├── Redes de Datos
+    │   ├── U1
+    │   │   ├── Actividades
+    │   │   │   ├── AltaA1
+    │   │   │   ├── BajaA1
+    │   │   │   └── MediaA1
+    │   │   ├── Evaluaciones
+    │   │   └── Practicas
+    │   └── U2
+    │       ├── Actividades
+    │       ├── Evaluaciones
+    │       │   ├── AltaA1
+    │       │   ├── BajaA1
+    │       │   └── MediaA1
+    │       └── Practicas
+    │           ├── AltaA1
+    │           ├── BajaA1
+    │           └── MediaA1
+    └── Sistemas Operativos
+        ├── U1
+        │   └── estudiantes.txt
+        └── U2
+
+17 directories, 12 files
+
+
+
+
+
 
